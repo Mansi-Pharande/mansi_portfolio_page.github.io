@@ -3,204 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mansi Pharande - AI Portfolio</title>
+    <title>Your Name - AI Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background: #0d1117;
             font-family: "Poppins", sans-serif;
+            background: #0d1117;
             color: #e6edf3;
-            overflow-x: hidden;
         }
 
-        /* HEADER */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #161b22;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #e6edf3;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(120deg, #0d1117, #161b22, #0d1117);
+            padding: 120px 20px;
         }
 
-        h1 {
+        header h1 {
             font-size: 3rem;
             color: #58a6ff;
             text-shadow: 0 0 15px #58a6ff;
-            animation: glow 2s infinite alternate;
         }
 
-        @keyframes glow {
-            from { text-shadow: 0 0 5px #58a6ff; }
-            to { text-shadow: 0 0 25px #58a6ff; }
+        .btn {
+            background: #58a6ff;
+            padding: 12px 20px;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: black;
+            font-weight: 600;
+            text-decoration: none;
         }
 
-        .subtitle {
-            margin-top: 10px;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* SECTIONS */
         section {
             max-width: 900px;
-            margin: 30px auto;
-            padding: 25px;
+            margin: 50px auto;
+            padding: 30px;
             background: #161b22;
             border-radius: 12px;
             border: 1px solid #30363d;
-            box-shadow: 0 0 12px #000;
-            transform: scale(0.97);
-            transition: 0.3s ease;
-            opacity: 0;
-            animation: fadeUp 0.8s ease forwards;
-        }
-
-        section:hover {
-            transform: scale(1.02);
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0px); }
         }
 
         h2 {
-            color: #58a6ff;
-            font-size: 1.5rem;
             border-left: 4px solid #58a6ff;
             padding-left: 10px;
-            margin-bottom: 15px;
+            color: #58a6ff;
         }
 
-        /* BUTTONS */
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            margin: 10px;
-            background: #58a6ff;
-            color: black;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #1f6feb;
-            box-shadow: 0 0 15px #58a6ff;
-        }
-
-        /* PROJECT CARD */
-        .project-card {
+        .project-card, .exp-card, .cert-card {
             background: #0f141a;
             padding: 20px;
             border-radius: 10px;
             border: 1px solid #30363d;
-            margin-bottom: 15px;
-            transition: 0.3s ease;
+            margin-bottom: 20px;
         }
 
-        .project-card:hover {
-            transform: translateY(-8px);
+        .project-card:hover, .exp-card:hover, .cert-card:hover {
             border-color: #58a6ff;
-            box-shadow: 0 0 20px #58a6ff;
         }
 
-        /* SKILLS BARS */
-        .skill-bar {
-            background: #0f141a;
-            border: 1px solid #30363d;
-            height: 12px;
-            border-radius: 10px;
-            margin: 8px 0 18px;
-            overflow: hidden;
-        }
-
-        .skill-level {
-            height: 100%;
-            background: linear-gradient(90deg, #58a6ff, #1f6feb);
-            width: 0%;
-            border-radius: 10px;
-            animation: growSkill 2s forwards;
-        }
-
-        @keyframes growSkill {
-            from { width: 0%; }
-            to { width: var(--level); }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #161b22;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <h1>Mansi Pharande</h1>
-    <p class="subtitle">B.Sc Artificial Intelligence Student | Python • Machine Learning • SQL</p>
+<nav>
+    <div style="font-size: 1.2rem; font-weight: 600;">Your Name</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certificates</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <a class="btn" href="#">Resume</a>
-    <a class="btn" href="https://github.com/Mansi-Pharande">GitHub</a>
-    <a class="btn" href="#">LinkedIn</a>
+<header id="home">
+    <h1>Your Name</h1>
+    <p>Your Title (Example: AI | ML | Python)</p>
+    <a class="btn" href="#">View Projects</a>
 </header>
 
-<!-- ABOUT -->
-<section>
+<section id="about">
     <h2>About Me</h2>
     <p>
-        I am a B.Sc Artificial Intelligence student passionate about Machine Learning, Python development,
-        and building intelligent systems. I focus on clean code, logical problem solving, and continuous learning.
+        <!-- Write your About Me here -->
+        <!-- Keep as many lines as you want -->
     </p>
 </section>
 
-<!-- SKILLS -->
-<section>
-    <h2>Skills</h2>
+<section id="experience">
+    <h2>Experience</h2>
 
-    Python
-    <div class="skill-bar"><div class="skill-level" style="--level: 85%;"></div></div>
+    <div class="exp-card">
+        <h3>Role / Internship Title</h3>
+        <p><strong>Organization:</strong> ______</p>
+        <p><strong>Duration:</strong> ______</p>
+        <ul>
+            <li><!-- Point 1 --></li>
+            <li><!-- Point 2 --></li>
+            <li><!-- Point 3 --></li>
+        </ul>
+    </div>
 
-    Machine Learning
-    <div class="skill-bar"><div class="skill-level" style="--level: 75%;"></div></div>
+    <div class="exp-card">
+        <h3>Role / Internship Title</h3>
+        <p><strong>Organization:</strong> ______</p>
+        <p><strong>Duration:</strong> ______</p>
+        <ul>
+            <li><!-- Point 1 --></li>
+            <li><!-- Point 2 --></li>
+            <li><!-- Point 3 --></li>
+        </ul>
+    </div>
 
-    SQL
-    <div class="skill-bar"><div class="skill-level" style="--level: 70%;"></div></div>
-
-    OOP Concepts
-    <div class="skill-bar"><div class="skill-level" style="--level: 80%;"></div></div>
 </section>
 
-<!-- PROJECTS -->
-<section>
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="project-card">
-        <h3>Disease Prediction System (ML)</h3>
-        <p>ML classification model using Scikit-learn with preprocessing & evaluation.</p>
-        <a href="#">Live Demo (Coming Soon)</a>
+        <h3>Project Title</h3>
+        <p><!-- Description --></p>
+        <p><strong>Tech Used:</strong> ______</p>
+        <a href="#" style="color:#58a6ff;">Code</a> |
+        <a href="#" style="color:#58a6ff;">Demo</a>
     </div>
 
     <div class="project-card">
-        <h3>Bank Management System (Python OOP)</h3>
-        <p>Secure OOP-based banking system using file handling.</p>
-        <a href="#">GitHub Repo</a>
+        <h3>Project Title</h3>
+        <p><!-- Description --></p>
+        <p><strong>Tech Used:</strong> ______</p>
+        <a href="#" style="color:#58a6ff;">Code</a> |
+        <a href="#" style="color:#58a6ff;">Demo</a>
     </div>
 
     <div class="project-card">
-        <h3>Student Record Management</h3>
-        <p>File-based CRUD system built with modular Python code.</p>
-        <a href="#">Github Repo</a>
+        <h3>Project Title</h3>
+        <p><!-- Description --></p>
+        <p><strong>Tech Used:</strong> ______</p>
+        <a href="#" style="color:#58a6ff;">Code</a> |
+        <a href="#" style="color:#58a6ff;">Demo</a>
     </div>
+
 </section>
 
-<!-- CONTACT -->
-<section>
+<section id="certs">
+    <h2>Certificates</h2>
+
+    <div class="cert-card">
+        <h3>Certificate Title</h3>
+        <p>Provider: ______</p>
+        <a href="#" style="color:#58a6ff;">Download</a>
+    </div>
+
+    <div class="cert-card">
+        <h3>Certificate Title</h3>
+        <p>Provider: ______</p>
+        <a href="#" style="color:#58a6ff;">Download</a>
+    </div>
+
+</section>
+
+<section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Mansi-Pharande">github.com/Mansi-Pharande</a></p>
-    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+    <p><strong>Email:</strong> ______</p>
+    <p><strong>LinkedIn:</strong> ______</p>
+    <p><strong>GitHub:</strong> ______</p>
 </section>
+
+<footer>
+    © 2025 Your Name. All rights reserved.
+</footer>
 
 </body>
 </html>
