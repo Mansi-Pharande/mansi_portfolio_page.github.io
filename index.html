@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mansi Pharande - AI Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mansi Pharande - Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <style>
         body {
             margin: 0;
-            background: #0d1117;
             font-family: "Poppins", sans-serif;
+            background: #0d1117;
             color: #e6edf3;
         }
 
+        /* NAVIGATION */
         nav {
             display: flex;
             justify-content: space-between;
@@ -29,86 +31,112 @@
             margin-left: 20px;
             color: #e6edf3;
             text-decoration: none;
+            font-weight: 500;
         }
 
         nav a:hover {
             color: #58a6ff;
         }
 
+        /* HERO SECTION */
         header {
             text-align: center;
-            padding: 120px 20px;
+            padding: 100px 20px;
         }
 
-        header h1 {
-            font-size: 3rem;
-            color: #58a6ff;
-            text-shadow: 0 0 20px #58a6ff;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #00eaff;
+            box-shadow: 0 0 25px #00eaff;
+            animation: glow 2s infinite alternate;
+            object-fit: cover;
         }
 
-        header p {
-            opacity: 0.9;
+        @keyframes glow {
+            from { box-shadow: 0 0 10px #00eaff; }
+            to { box-shadow: 0 0 30px #00eaff; }
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            margin-top: 20px;
+            color: #00eaff;
+        }
+
+        h3 {
             font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-top: 25px;
+            color: #12f7ff;
+            font-weight: 600;
+            text-shadow: 0 0 10px #12f7ff;
         }
 
         .btn {
-            background: #58a6ff;
-            padding: 12px 24px;
+            background: #00eaff;
+            padding: 12px 22px;
             border-radius: 8px;
             color: black;
-            margin-top: 20px;
-            display: inline-block;
-            text-decoration: none;
             font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 25px;
         }
 
+        /* SECTION STYLING */
         section {
             max-width: 900px;
             margin: 40px auto;
-            padding: 30px;
             background: #161b22;
+            padding: 25px;
             border-radius: 12px;
             border: 1px solid #30363d;
         }
 
         h2 {
-            border-left: 4px solid #58a6ff;
+            border-left: 4px solid #12f7ff;
             padding-left: 10px;
-            color: #58a6ff;
+            color: #12f7ff;
         }
 
-        .project-card, .cert-card {
+        .card {
             background: #0f141a;
             padding: 20px;
             border-radius: 10px;
             border: 1px solid #30363d;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .project-card img, .cert-card img {
+        .card img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 10px;
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 20px;
             background: #161b22;
-            margin-top: 30px;
-            border-top: 1px solid #30363d;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION BAR -->
+<!-- NAVBAR -->
 <nav>
-    <div style="font-size:1.2rem;font-weight:600;">Mansi Pharande</div>
+    <div style="font-size: 1.3rem; font-weight: 600;">Mansi Pharande</div>
     <div>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#certs">Certificates</a>
@@ -116,45 +144,44 @@
     </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <header id="home">
+    <img class="profile-img" src="https://images.unsplash.com/photo-1581092334630-1e7a6d02f7f6?auto=format&fit=crop&w=300&q=80" alt="profile" />
+
     <h1>Mansi Pharande</h1>
-    <p>B.Sc Artificial Intelligence Student | Python • ML • SQL</p>
-    <a href="#" class="btn">View Projects</a>
+    <h3>B.Sc Artificial Intelligence Student • Final Year Student</h3>
+
+    <div class="tagline">
+        Building Intelligent Systems for Real-World Impact
+    </div>
+
+    <a href="#projects" class="btn">View Projects</a>
 </header>
 
-<!-- ABOUT ME -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        <!-- WRITE YOUR ABOUT HERE -->
-    </p>
-</section>
-
-<!-- EDUCATION (Academic Journey like Yash Jain portfolio) -->
+<!-- EDUCATION -->
 <section id="education">
     <h2>Academic Journey</h2>
 
-    <div class="cert-card">
+    <div class="card">
         <h3>B.Sc Artificial Intelligence</h3>
-        <p><strong>University:</strong> _______</p>
-        <p><strong>Location:</strong> _______</p>
+        <p><strong>University:</strong> Yashwantrao Chavan Institute of Science, Satara</p>
+        <p><strong>Location:</strong> Satara, Maharashtra</p>
         <p><strong>Duration:</strong> 2023 – 2026</p>
-        <p><strong>CGPA:</strong> _______</p>
+        <p><strong>CGPA:</strong> 9.0</p>
     </div>
 
-    <div class="cert-card">
+    <div class="card">
         <h3>HSC – Science</h3>
-        <p><strong>School:</strong> _______</p>
+        <p><strong>School:</strong> Disha Public School & Junior College</p>
         <p><strong>Year:</strong> 2023</p>
-        <p><strong>Percentage:</strong> _______</p>
+        <p><strong>Percentage:</strong> 64.67%</p>
     </div>
 
-    <div class="cert-card">
+    <div class="card">
         <h3>SSC</h3>
-        <p><strong>School:</strong> _______</p>
+        <p><strong>School:</strong> Tiranga English School, Panchwad</p>
         <p><strong>Year:</strong> 2021</p>
-        <p><strong>Percentage:</strong> _______</p>
+        <p><strong>Percentage:</strong> 94%</p>
     </div>
 </section>
 
@@ -162,53 +189,48 @@
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project-card">
-        <img src="project1.jpg" alt="Project Image Placeholder">
-        <h3>Disease Prediction System (Machine Learning)</h3>
-        <p><!-- Add description here --></p>
-        <p><strong>Tech Used:</strong> Python, ML, Scikit-learn</p>
-        <a href="#" style="color:#58a6ff;">GitHub</a> |
-        <a href="#" style="color:#58a6ff;">Demo</a>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=900&q=80" alt="">
+        <h3>Disease Prediction System (ML)</h3>
+        <p><!-- Add description --></p>
+        <p><strong>Tech:</strong> Python, ML, Pandas, Scikit-learn</p>
     </div>
 
-    <div class="project-card">
-        <img src="project2.jpg" alt="Project Image Placeholder">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80" alt="">
         <h3>Bank Management System (Python OOP)</h3>
-        <p><!-- Add description here --></p>
-        <p><strong>Tech Used:</strong> Python, OOP</p>
-        <a href="#" style="color:#58a6ff;">GitHub</a> |
-        <a href="#" style="color:#58a6ff;">Demo</a>
+        <p><!-- Add description --></p>
+        <p><strong>Tech:</strong> Python, OOP, File Handling</p>
     </div>
 
-    <div class="project-card">
-        <img src="project3.jpg" alt="Project Image Placeholder">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="">
         <h3>Student Record System</h3>
-        <p><!-- Add description here --></p>
-        <p><strong>Tech Used:</strong> Python</p>
-        <a href="#" style="color:#58a6ff;">GitHub</a> |
-        <a href="#" style="color:#58a6ff;">Demo</a>
+        <p><!-- Add description --></p>
+        <p><strong>Tech:</strong> Python</p>
     </div>
 </section>
 
 <!-- CERTIFICATES -->
 <section id="certs">
-    <h2>Certificates & Credentials</h2>
+    <h2>Certificates</h2>
 
-    <div class="cert-card">
-        <img src="cert1.jpg" alt="Certificate Image">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b36c55f?auto=format&fit=crop&w=900&q=80" alt="">
         <h3>TCS iON Career Edge – Young Professional</h3>
-        <a href="#" style="color:#58a6ff;">View Certificate</a>
+        <a href="#" style="color:#00eaff;">View Certificate</a>
     </div>
 
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact Me</h2>
+
     <p><strong>Email:</strong> mansipharande78@gmail.com</p>
     <p><strong>Phone:</strong> 8605159731</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mansi-pharande-52452034b/" style="color:#58a6ff;">Click Here</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Mansi-Pharande" style="color:#58a6ff;">Click Here</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mansi-pharande-52452034b/" style="color:#00eaff;">Click Here</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Mansi-Pharande" style="color:#00eaff;">Click Here</a></p>
 </section>
 
 <footer>
