@@ -5,93 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mansi Pharande - AI Portfolio</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        /* ---------------------- GLOBAL STYLES ---------------------- */
         body {
             margin: 0;
             padding: 0;
             background: #0d1117;
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", sans-serif;
             color: #e6edf3;
             overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            margin: 0;
-        }
-
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        /* Fade-in animation global */
-        * {
-            animation: fadeIn 1s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ---------------------- HEADER ---------------------- */
+        /* HEADER */
         header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            background: linear-gradient(120deg, #0d1117, #161b22, #0d1117);
         }
 
-        .typing {
-            font-size: 1.3rem;
+        h1 {
+            font-size: 3rem;
             color: #58a6ff;
+            text-shadow: 0 0 15px #58a6ff;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #58a6ff; }
+            to { text-shadow: 0 0 25px #58a6ff; }
+        }
+
+        .subtitle {
             margin-top: 10px;
-            border-right: 3px solid #58a6ff;
-            width: 22ch;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 3s steps(22), blink 0.6s step-end infinite alternate;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
-        @keyframes typing {
-            from { width: 0; }
-        }
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-
-        /* ---------------------- SECTIONS ---------------------- */
+        /* SECTIONS */
         section {
-            max-width: 950px;
+            max-width: 900px;
             margin: 30px auto;
             padding: 25px;
             background: #161b22;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid #30363d;
-            box-shadow: 0 0 15px #000;
-            transition: transform 0.3s ease;
+            box-shadow: 0 0 12px #000;
+            transform: scale(0.97);
+            transition: 0.3s ease;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
         }
 
         section:hover {
-            transform: scale(1.01);
+            transform: scale(1.02);
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0px); }
         }
 
         h2 {
             color: #58a6ff;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
             border-left: 4px solid #58a6ff;
             padding-left: 10px;
+            margin-bottom: 15px;
         }
 
-        /* ---------------------- BUTTONS ---------------------- */
+        /* BUTTONS */
         .btn {
             display: inline-block;
             padding: 12px 20px;
             margin: 10px;
             background: #58a6ff;
-            color: #0d1117;
+            color: black;
+            border-radius: 8px;
             font-weight: bold;
-            border-radius: 6px;
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
 
         .btn:hover {
@@ -99,131 +92,115 @@
             box-shadow: 0 0 15px #58a6ff;
         }
 
-        /* ---------------------- PROJECT CARDS ---------------------- */
+        /* PROJECT CARD */
         .project-card {
             background: #0f141a;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             border: 1px solid #30363d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             transition: 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-8px);
             border-color: #58a6ff;
-            box-shadow: 0 0 18px #58a6ff;
+            box-shadow: 0 0 20px #58a6ff;
         }
 
-        /* ---------------------- SKILLS BARS ---------------------- */
-        .skill {
-            margin-bottom: 15px;
-        }
-
+        /* SKILLS BARS */
         .skill-bar {
-            width: 100%;
             background: #0f141a;
-            border-radius: 10px;
             border: 1px solid #30363d;
+            height: 12px;
+            border-radius: 10px;
+            margin: 8px 0 18px;
             overflow: hidden;
         }
 
         .skill-level {
-            height: 12px;
-            border-radius: 10px;
+            height: 100%;
             background: linear-gradient(90deg, #58a6ff, #1f6feb);
-            animation: grow 2s ease forwards;
             width: 0%;
+            border-radius: 10px;
+            animation: growSkill 2s forwards;
         }
 
-        @keyframes grow {
+        @keyframes growSkill {
             from { width: 0%; }
             to { width: var(--level); }
         }
-
     </style>
 </head>
+
 <body>
 
-    <!-- ---------------------- HEADER ---------------------- -->
-    <header>
-        <h1 style="color:#58a6ff; text-shadow:0 0 12px #58a6ff;">Mansi Pharande</h1>
-        <div class="typing">
-            AI Student • Python Developer • ML Learner
-        </div>
+<!-- HEADER -->
+<header>
+    <h1>Mansi Pharande</h1>
+    <p class="subtitle">B.Sc Artificial Intelligence Student | Python • Machine Learning • SQL</p>
 
-        <a class="btn" href="#" download>Download Resume</a>
-        <a class="btn" href="https://github.com/Mansi-Pharande">GitHub</a>
-        <a class="btn" href="#">LinkedIn</a>
-    </header>
+    <a class="btn" href="#">Resume</a>
+    <a class="btn" href="https://github.com/Mansi-Pharande">GitHub</a>
+    <a class="btn" href="#">LinkedIn</a>
+</header>
 
-    <!-- ---------------------- ABOUT ---------------------- -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a B.Sc Artificial Intelligence student passionate about Machine Learning, Python development,
-            and building intelligent applications. I focus on problem-solving, clean coding practices,
-            and creating real-world impactful AI projects.
-        </p>
-    </section>
+<!-- ABOUT -->
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a B.Sc Artificial Intelligence student passionate about Machine Learning, Python development,
+        and building intelligent systems. I focus on clean code, logical problem solving, and continuous learning.
+    </p>
+</section>
 
-    <!-- ---------------------- SKILLS ---------------------- -->
-    <section>
-        <h2>Skills</h2>
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
 
-        <div class="skill">
-            Python
-            <div class="skill-bar"><div class="skill-level" style="--level:85%;"></div></div>
-        </div>
+    Python
+    <div class="skill-bar"><div class="skill-level" style="--level: 85%;"></div></div>
 
-        <div class="skill">
-            Machine Learning
-            <div class="skill-bar"><div class="skill-level" style="--level:75%;"></div></div>
-        </div>
+    Machine Learning
+    <div class="skill-bar"><div class="skill-level" style="--level: 75%;"></div></div>
 
-        <div class="skill">
-            SQL
-            <div class="skill-bar"><div class="skill-level" style="--level:70%;"></div></div>
-        </div>
+    SQL
+    <div class="skill-bar"><div class="skill-level" style="--level: 70%;"></div></div>
 
-        <div class="skill">
-            OOP Concepts
-            <div class="skill-bar"><div class="skill-level" style="--level:80%;"></div></div>
-        </div>
+    OOP Concepts
+    <div class="skill-bar"><div class="skill-level" style="--level: 80%;"></div></div>
+</section>
 
-    </section>
+<!-- PROJECTS -->
+<section>
+    <h2>Projects</h2>
 
-    <!-- ---------------------- PROJECTS ---------------------- -->
-    <section>
-        <h2>AI Projects</h2>
+    <div class="project-card">
+        <h3>Disease Prediction System (ML)</h3>
+        <p>ML classification model using Scikit-learn with preprocessing & evaluation.</p>
+        <a href="#">Live Demo (Coming Soon)</a>
+    </div>
 
-        <div class="project-card">
-            <h3>Disease Prediction System (Machine Learning)</h3>
-            <p>Classification model using Scikit-learn, preprocessing, accuracy evaluation.</p>
-            <a href="#">Live Demo (Coming Soon)</a>
-        </div>
+    <div class="project-card">
+        <h3>Bank Management System (Python OOP)</h3>
+        <p>Secure OOP-based banking system using file handling.</p>
+        <a href="#">GitHub Repo</a>
+    </div>
 
-        <div class="project-card">
-            <h3>Bank Management System (Python OOP)</h3>
-            <p>Secure account operations using file handling and object-oriented design.</p>
-            <a href="#">GitHub Repo</a>
-        </div>
+    <div class="project-card">
+        <h3>Student Record Management</h3>
+        <p>File-based CRUD system built with modular Python code.</p>
+        <a href="#">Github Repo</a>
+    </div>
+</section>
 
-        <div class="project-card">
-            <h3>Student Record System</h3>
-            <p>File-based CRUD operation system with modular functions.</p>
-            <a href="#">GitHub Repo</a>
-        </div>
-
-    </section>
-
-    <!-- ---------------------- CONTACT ---------------------- -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Mansi-Pharande">github.com/Mansi-Pharande</a></p>
-        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-    </section>
+<!-- CONTACT -->
+<section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Mansi-Pharande">github.com/Mansi-Pharande</a></p>
+    <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+</section>
 
 </body>
 </html>
